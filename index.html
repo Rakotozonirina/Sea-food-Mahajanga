@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./Images/seafood-favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Seafood in Mahajanga | Home</title>
     <style>
         *{
@@ -18,13 +21,80 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 10px 0;
         }
         .head-top > p{
             color: #FFFFFF;
             font-size: 40px;
-            font-weight: 800;
-            font-style: italic;
-            font-family: cursive;
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .nav-links{
+            width: 100%;
+            height: 10dvh;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .nav-links > ul{
+            list-style: none;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 20px;
+            padding-left: 120px;
+            padding-top: 20px;
+        }
+        .nav-links > ul > li > a{
+            text-decoration: none;
+            color: #333333;
+            font-size: 20px;
+            font-family: Lato, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding: 8px 12px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-section{
+            width: 90%;
+            height: 80dvh;
+            background-image: url('./Images/image_hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .hero-section > h1{
+            color: #FFFFFF;
+            font-size: 64px;
+            font-family: Playfair Display, serif;
+            text-align: center;
+        }
+        .hero-section > h3{
+            color: #FFFFFF;
+            font-size: 40px;
+            font-family: Playfair Display, serif;
+            text-align: center;
+        }
+        .hero-section > button{
+            background-color: #1A73E8;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-family: "Pacifico", cursive;
+            font-weight: 600;
+            font-style: normal;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
         body{
             background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
@@ -36,6 +106,24 @@
 <body>
     <nav>
         <div class="head-top"><p>Seafood in Mahajanga</p></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/introduction.html">Introduction</a></li>
+                <li><a href="/seafood_dishes.html">Seafood Dishes</a></li>
+                <li><a href="/where_to_eat.html">Where to Eat</a></li>
+                <li><a href="/culture.html">Culture</a></li>
+                <li><a href="/sustainability.html">Sustainability</a></li>
+                <li><a href="/conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
     </nav>
+    <main>
+        <section class="hero-section">
+            <h1>Discover the Flavors of Mahajanga</h1>
+            <h3>Explore the freshest seafood from the <br> Mozambique Channel.</h3>
+            <button>Explore Now</button>
+        </section>
+    </main>
 </body>
 </html>
