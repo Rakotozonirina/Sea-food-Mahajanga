@@ -21,11 +21,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 0;
+            padding: 0.625rem 0;
         }
         .head-top > p{
             color: #FFFFFF;
-            font-size: 40px;
+            font-size: 2.5rem;
             font-family: "Pacifico", cursive;
             font-weight: 400;
             font-style: normal;
@@ -42,18 +42,31 @@
             display: flex;
             justify-content: start;
             align-items: center;
-            gap: 20px;
-            padding-left: 120px;
-            padding-top: 20px;
+            gap: 1.25rem;
+            padding-left: 7.5rem;
+            padding-top: 1.25rem;
+        }
+        @media (width < 580px) {
+            .nav-links{
+                height: auto;
+            }
+            .nav-links > ul{
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 1.25rem 0;
+                align-items: center;
+                gap: 0.625rem;
+            }
         }
         .nav-links > ul > li > a{
             text-decoration: none;
             color: #333333;
-            font-size: 20px;
+            font-size: 1.25rem;
             font-family: Lato, sans-serif;
             font-weight: 500;
             font-style: normal;
-            padding: 8px 12px;
+            padding: 0.5rem 0.75rem;
             transition: background-color 0.3s, color 0.3s;
         }
         .hero-section{
@@ -63,36 +76,36 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border-radius: 20px;
-            margin: 20px auto;
+            border-radius: 1.25rem;
+            margin: 1.25rem auto;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 20px;
+            gap: 1.25rem;
         }
         .hero-section > h1{
             color: #FFFFFF;
-            font-size: 64px;
+            font-size: 4rem;
             font-family: Playfair Display, serif;
             text-align: center;
         }
         .hero-section > h3{
             color: #FFFFFF;
-            font-size: 40px;
+            font-size: 2.5rem;
             font-family: Playfair Display, serif;
             text-align: center;
         }
         .hero-section > button{
             background-color: #1A73E8;
             color: #FFFFFF;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-family: "Pacifico", cursive;
             font-weight: 600;
             font-style: normal;
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 0.5rem;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
