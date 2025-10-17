@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Seafood in Mahajanga | Home</title>
     <style>
         *{
@@ -46,7 +47,177 @@
             padding-left: 7.5rem;
             padding-top: 1.25rem;
         }
-        @media (width < 580px) {
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #333333;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            top: 12dvh;
+            right: 1.25rem;
+            z-index: 100;
+        }
+        .menu-toggle:focus {
+            outline: none;
+        }
+        .service{
+            width: 100%;
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .brief{
+            width: 40%;
+            height: 50dvh;
+            border-radius: 1.25rem;
+            background: url("Images/brief.png") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-direction: column;
+        }
+        .brief h3{
+            font-size: 2rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family:  Lato, sans-serif;
+            text-align: center;
+        }
+        .brief a{
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: "Pacifico", cursive;
+        }
+        .dishe{
+            width: 40%;
+            height: 50dvh;
+            border-radius: 1.25rem;
+            background: url("Images/dishes.png") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-direction: column;
+        }
+        .dishe h3{
+            font-size: 2rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family:  Lato, sans-serif;
+            text-align: center;
+        }
+        .dishe a{
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: "Pacifico", cursive;
+        }
+        .places{
+            width: 40%;
+            height: 50dvh;
+            border-radius: 1.25rem;
+            background: url("Images/Places.png") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-direction: column;
+        }
+        .places h3{
+            font-size: 2rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family:  Lato, sans-serif;
+            text-align: center;
+        }
+        .places a{
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: "Pacifico", cursive;
+        }
+        .cultural{
+            width: 40%;
+            height: 50dvh;
+            border-radius: 1.25rem;
+            background: url("Images/cultural.png") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-direction: column;
+        }
+        .cultural h3{
+            font-size: 2rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family:  Lato, sans-serif;
+            text-align: center;
+        }
+        .cultural a{
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: "Pacifico", cursive;
+        }
+        @media (max-width: 992px) { /* Tablet responsive */
+            .nav-links > ul {
+                padding-left: 2rem;
+                gap: 0.75rem;
+            }
+            .nav-links > ul > li > a {
+                font-size: 1.1rem;
+            }
+            .hero-section > h1 {
+                font-size: 3rem;
+            }
+            .hero-section > h3 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 1150px) { /* Tablet and mobile menu button */
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                height: auto;
+            }
+            .nav-links > ul {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 1.25rem 0;
+                align-items: center;
+                gap: 0.625rem;
+                background-color: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 10dvh;
+                left: 0;
+                z-index: 99;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .nav-links > ul.show {
+                display: flex;
+            }
+            nav{
+                margin-bottom: 4rem;
+            }
+        }
+        
+        @media (max-width: 580px) { /* Mobile responsive */
             .nav-links{
                 height: auto;
             }
@@ -58,7 +229,20 @@
                 align-items: center;
                 gap: 0.625rem;
             }
+            .hero-section > h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section > h3 {
+                font-size: 1.5rem;
+            }
+            nav{
+                margin-bottom: 4rem;
+            }
+            .brief, .dishe, .places, .cultural{
+                width: 450px;
+            }
         }
+        
         .nav-links > ul > li > a{
             text-decoration: none;
             color: #333333;
@@ -119,8 +303,11 @@
 <body>
     <nav>
         <div class="head-top"><p>Seafood in Mahajanga</p></div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
         <div class="nav-links">
-            <ul>
+            <ul id="navMenu">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/introduction.html">Introduction</a></li>
                 <li><a href="/seafood_dishes.html">Seafood Dishes</a></li>
@@ -138,8 +325,73 @@
             <button>Explore Now</button>
         </section>
         <section class="baniere">
-            <img src="./Images/bannière.png" alt="Baniere Image" style="width:100%; height:40dvh;margin: 20px 0;">
+            <img src="./Images/bannière.png" alt="Baniere Image" style="width:100%; height:40dvh;margin: 20px 0;object-fit: cover;">
+        </section>
+        <section class="service">
+            <div class="brief">
+                <h3>A brief overview of Mahajanga’s seafood scene.</h3>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="dishe">
+                <h3>Must-Try Seafood Dishes in Mahajanga.</h3>
+                <a href="#">Explore Dishes</a>
+            </div>
+            <div class="places">
+                <h3>Best Places to Enjoy Seafood in Mahajanga.</h3>
+                <a href="#">Find Locations</a>
+            </div>
+            <div class="cultural">
+                <h3>The Cultural Connection of Seafood in Mahajanga.</h3>
+                <a href="#">Discover Culture</a>
+            </div>
+        </section>
+        <section class="conservation">
+
         </section>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                
+                // Change icon based on menu state
+                const icon = menuToggle.querySelector('i');
+                if (navMenu.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-links ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navMenu.classList.remove('show');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('show');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
