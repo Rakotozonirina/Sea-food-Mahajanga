@@ -70,6 +70,7 @@
             justify-content: center;
             align-items: center;
             gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
         .brief{
             width: 40%;
@@ -215,6 +216,12 @@
             nav{
                 margin-bottom: 4rem;
             }
+            .conservation{
+                border: 1px solid;
+            }
+            .detail-conservation{
+                flex-direction: column;
+            }
         }
         
         @media (max-width: 580px) { /* Mobile responsive */
@@ -241,6 +248,7 @@
             .brief, .dishe, .places, .cultural{
                 width: 450px;
             }
+            
         }
         
         .nav-links > ul > li > a{
@@ -298,6 +306,33 @@
             width: 100%;
             height: 800dvh;
         }
+        .conservation{
+            width: 100%;
+            height: auto;
+            padding: 0 8rem;
+        }
+        .conservation h1{
+            font-size: 4rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: Playfair Display, serif;
+        }
+        .detail-conservation{
+            width: 100%;
+            height: auto;
+            gap: 1.25rem;
+            display: flex;
+            padding: 1.25rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .detail-conservation article p{
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: Lato, sans-serif;
+            margin-bottom: 1.25rem;
+        }
     </style>
 </head>
 <body>
@@ -346,7 +381,14 @@
             </div>
         </section>
         <section class="conservation">
-
+            <h1>Sustainability and Conservation</h1>
+            <div class="detail-conservation">
+                <img src="/Images/conservation.png" alt="coucher de soleil a Mahajanga" style="width: 100%; height: 50dvh;object-fit: cover;">
+                <article>
+                    <p>As the demand for seafood grows, so does the importance of sustainable fishing practices. Many locals in Mahajanga are committed to preserving their marine resources, ensuring that future generations can continue to enjoy the bounty of the sea.</p>
+                    <p>When dining in Mahajanga, consider supporting restaurants and vendors that prioritize sustainability.</p>
+                </article>
+            </div>
         </section>
     </main>
 
