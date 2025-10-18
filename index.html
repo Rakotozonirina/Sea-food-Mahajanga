@@ -172,23 +172,23 @@
             font-weight: 400;
             font-family: "Pacifico", cursive;
         }
-        @media (max-width: 992px) { /* Tablet responsive */
-            .nav-links > ul {
-                padding-left: 2rem;
-                gap: 0.75rem;
-            }
-            .nav-links > ul > li > a {
-                font-size: 1.1rem;
-            }
-            .hero-section > h1 {
-                font-size: 3rem;
-            }
-            .hero-section > h3 {
-                font-size: 2rem;
-            }
+        @media (1151px < width){
+            .conservation{
+                width: 100%;
+                height: auto;
+                padding: 0 8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+            }   
+            body{
+            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
+            width: 100%;
+            height: 500dvh;
+        }
         }
         
-        @media (max-width: 1150px) { /* Tablet and mobile menu button */
+        @media ( 581px < width < 1150px) { /* Tablet and mobile menu button */
             .menu-toggle {
                 display: block;
             }
@@ -216,15 +216,20 @@
             nav{
                 margin-bottom: 4rem;
             }
-            .conservation{
-                border: 1px solid;
-            }
             .detail-conservation{
                 flex-direction: column;
             }
+            .conservation{
+                padding: 0 4rem;
+            }
+            body{
+            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
+            width: 100%;
+            height: 570dvh;
+        }
         }
         
-        @media (max-width: 580px) { /* Mobile responsive */
+        @media (width < 580px) { /* Mobile responsive */
             .nav-links{
                 height: auto;
             }
@@ -248,7 +253,17 @@
             .brief, .dishe, .places, .cultural{
                 width: 450px;
             }
-            
+            .conservation{
+                padding: 0 2rem;
+            }
+            body{
+            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
+            width: 100%;
+            height: 800dvh;
+            }
+            .detail-conservation{
+                flex-direction: column;
+            }
         }
         
         .nav-links > ul > li > a{
@@ -300,16 +315,6 @@
             border-radius: 0.5rem;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
-        }
-        body{
-            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
-            width: 100%;
-            height: 800dvh;
-        }
-        .conservation{
-            width: 100%;
-            height: auto;
-            padding: 0 8rem;
         }
         .conservation h1{
             font-size: 4rem;
@@ -387,6 +392,14 @@
                 <article>
                     <p>As the demand for seafood grows, so does the importance of sustainable fishing practices. Many locals in Mahajanga are committed to preserving their marine resources, ensuring that future generations can continue to enjoy the bounty of the sea.</p>
                     <p>When dining in Mahajanga, consider supporting restaurants and vendors that prioritize sustainability.</p>
+                </article>
+            </div>
+            <h1>Final Thoughts</h1>
+            <div class="detail-conservation">
+                <img src="/Images/local.png" alt="coucher de soleil a Mahajanga" style="width: 100%; height: 50dvh;object-fit: cover;">
+                <article>
+                    <p>Mahajanga is a seafood lover’s paradise, offering a unique blend of flavors, traditions, and breathtaking scenery. Whether you’re savoring a plate of grilled lobster by the beach or exploring the vibrant local markets, the seafood in Mahajanga is sure to leave a lasting impression.</p>
+                    <p> So, pack your appetite and get ready to embark on a culinary journey through one of Madagascar’s most enchanting coastal cities.</p>
                 </article>
             </div>
         </section>
