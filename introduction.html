@@ -5,42 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction| Seafood in Mahajanga</title>
 <style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
     body{
         background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
         width: 100%;
         height: 100vh;
-       
     }
     main{
         width: 100%;
-        height: 40vh;
+        height: 100vh;
         display: flex;
-        text-align:center;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5rem;
     }
 
     main h1{
         width: 60%;
         color: white;
         font-size: 50px;
+        text-align: center;
     }
 
     .container{
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
+        padding: 0 4rem;
     }
 
     .image1{
-        flex: 0 0 40%;
+        flex: 1;
     }
 
     .image1 img{
         width: 100%;
-        height: auto;
+        height: 50dvh;
         display: block;
+        border-radius: 25px;
     }
 
     .text{
@@ -48,27 +56,32 @@
         color: white;
         margin-right: 4%;
     }
+    .text h3{
+        font-weight: 400;
+        font-family: Lato, sans-serif;
+    }
 </style>
 </head>
 <body>
     <main>
          <h1>Exploring the Seafood Delights of Mahajanga, Madagascar</h1>
+         <div class="container">
+            <div class="image1">
+                <img src="Screenshot_20251018-094836.png" alt="image">
+            </div>
+
+
+            <div class="text">
+                <h3>
+                Nestled along the picturesque northwest coast of Madagascar, Mahajanga is a vibrant port city that boasts a rich cultural heritage, stunning beaches, and a culinary scene that seaffod lovers dream of.
+                <br><br>Known for its warm climate, laid-back atmosphere, and promixity to the Mozambique Channel, Mahajanga is a paradise for those seeking fresh, flavortful, and diverse seafood dishes. Let's dive into the culinary treasure of this coastalgem.
+                </h3>
+            </div>
+        </div>
         
     </main>
 
-    <div class="container">
-        <div class="image1">
-            <img src="Screenshot_20251018-094836.png" alt="image">
-        </div>
-
-
-        <div class="text">
-            <h3>
-            Nestled along the picturesque northwest coast of Madagascar, Mahajanga is a vibrant port city that boasts a rich cultural heritage, stunning beaches, and a culinary scene that seaffod lovers dream of.
-            <br><br>Known for its warm climate, laid-back atmosphere, and promixity to the Mozambique Channel, Mahajanga is a paradise for those seeking fresh, flavortful, and diverse seafood dishes. Let's dive into the culinary treasure of this coastalgem.
-            </h3>
-        </div>
-    </div>
+   
     
 
 </body>
