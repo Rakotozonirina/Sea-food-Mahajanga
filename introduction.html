@@ -10,10 +10,75 @@
         padding: 0;
         margin: 0;
     }
+    /* Navigation styles */
+        nav {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+        
+        .head-top {
+            width: 100%;
+            height: 5vh;
+            background-color: #1A73E8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .head-top p {
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            font-family: "Pacifico", cursive;
+        }
+        
+        .nav-links {
+            width: 100%;
+            height: 10vh;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-links > ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            list-style: none;
+        }
+        
+        .nav-links > ul > li > a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 1.25rem;
+            font-family: Lato, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding: 0.5rem 0.75rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 5vh;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: #333333;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            padding: 0.5rem;
+        }
     body{
         background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
     }
     main{
         width: 100%;
@@ -60,16 +125,157 @@
         font-weight: 400;
         font-family: Lato, sans-serif;
     }
-
+    /* Footer styles */
+        footer {
+            width: 100%;
+            min-height: 40vh;
+            background-color: #1A73E8;
+            display: flex;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer ul {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        footer ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        footer ul li a:hover {
+            color: #e0e0e0;
+        }
+        
+        footer .adresse {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            color: #FFFFFF;
+        }
+        
+        footer .adresse span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        footer .adresse span i {
+            width: 20px;
+        }
+        
+        footer .Rights {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .Rights p {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+/* Desktop (larger than 1150px) */
+        @media (min-width: 1151px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        /* Tablet and small desktop (768px to 1150px) */
+        @media (max-width: 1150px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links > ul {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 1.25rem 0;
+                align-items: center;
+                gap: 0.625rem;
+                background-color: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 10vh;
+                left: 0;
+                z-index: 99;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links > ul.show {
+                display: flex;
+            }
+        }
+        @media (max-width:992px){
+            footer {
+                flex-wrap: wrap;
+            }
+            
+            footer ul, footer .adresse {
+                flex: 0 0 50%;
+                padding: 1rem;
+            }
+            
+            footer .Rights {
+                flex: 0 0 100%;
+                margin-top: 1rem;
+            }
+        }
+        /* Mobile (less than 768px) */
+        @media (max-width: 768px) {
+            nav {
+                margin-bottom: 1rem;
+            }
+            footer {
+                flex-direction: column;
+            }
+            
+            footer ul, footer .adresse, footer .Rights {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            footer .adresse {
+                align-items: center;
+                text-align: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .head-top p {
+                font-size: 1rem;
+            }
+            footer {
+                padding: 1.5rem 0.5rem;
+            }
+            
+            footer ul li a, footer .adresse span, .Rights p {
+                font-size: 0.9rem;
+            }
+        }
         @media(max-width:1160px){
         .container{
             flex-direction: column;
         }
         main{
-            height: 140vh;
+            min-height: 140vh;
         }
         body{
-            height: 140vh;
+            min-height: 140vh;
         }
         main h1{
             text-align: start;
@@ -81,10 +287,10 @@
             flex-direction: column;
         }
         main{
-            height: 200vh;
+            min-height: 200vh;
         }
         body{
-            height: 200vh;
+            min-height: 200vh;
         }
         main h1{
             text-align: start;
@@ -93,6 +299,23 @@
 </style>
 </head>
 <body>
+    <nav>
+        <div class="head-top"><p>Seafood in Mahajanga</p></div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <ul id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/introduction.html">Introduction</a></li>
+                <li><a href="/seafood_dishes.html">Seafood Dishes</a></li>
+                <li><a href="/where_to_eat.html">Where to Eat</a></li>
+                <li><a href="/culture.html">Culture</a></li>
+                <li><a href="/sustainability.html">Sustainability</a></li>
+                <li><a href="/conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
          <h1>Exploring the Seafood Delights of Mahajanga, Madagascar</h1>
          <div class="container">
@@ -110,9 +333,38 @@
         </div>
         
     </main>
-
-   
-    
-
+    <footer>
+        <ul>
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/seafood_dishes.html">Seafood Dishes</a>
+            </li>
+            <li>
+                <a href="/where_to_eat.html">Where to Eat</a>
+            </li>
+            <li>
+                <a href="/culture.html">Culture</a>
+            </li>
+            <li>
+                <a href="/sustainability.html">Sustainability</a>
+            </li>
+            <li>
+                <a href="/conclusion.html">Conclusion</a>
+            </li>
+        </ul>
+        <div class="adresse">
+            <span><i class="fa-regular fa-envelope"></i>SeafoodinMahajanga@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i>+261 32 97 19391</span>
+            <span>Tsaramandroso Ambany Mahajanga I, Madagascar</span>
+        </div>
+        <div class="Rights">
+            <p>@2025 seafood All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
 </html>
