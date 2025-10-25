@@ -10,263 +10,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Seafood in Mahajanga | Home</title>
     <style>
-        *{
-            box-sizing: border-box;
+        /* Base styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .head-top{
+        
+        body {
+            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
             width: 100%;
-            height: 10dvh;
+            min-height: 100vh;
+            font-family: Lato, sans-serif;
+        }
+        
+        /* Navigation styles */
+        nav {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+        
+        .head-top {
+            width: 100%;
+            height: 5vh;
             background-color: #1A73E8;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0.625rem 0;
         }
-        .head-top > p{
+        
+        .head-top p {
             color: #FFFFFF;
-            font-size: 2.5rem;
+            font-size: 1.25rem;
             font-family: "Pacifico", cursive;
-            font-weight: 400;
-            font-style: normal;
         }
-        .nav-links{
+        
+        .nav-links {
             width: 100%;
-            height: 10dvh;
+            height: 10vh;
+            background-color: #FFFFFF;
             display: flex;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
         }
-        .nav-links > ul{
+        
+        .nav-links > ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
             list-style: none;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 1.25rem;
-            padding-left: 7.5rem;
-            padding-top: 1.25rem;
-        }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #333333;
-            font-size: 1.5rem;
-            cursor: pointer;
-            position: absolute;
-            top: 12dvh;
-            right: 1.25rem;
-            z-index: 100;
-        }
-        .menu-toggle:focus {
-            outline: none;
-        }
-        .service{
-            width: 100%;
-            margin-top: 1.25rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2.5rem;
-            margin-bottom: 2.5rem;
-        }
-        .brief{
-            width: 40%;
-            height: 50dvh;
-            border-radius: 1.25rem;
-            background: url("Images/brief.png") no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.25rem;
-            flex-direction: column;
-        }
-        .brief h3{
-            font-size: 2rem;
-            color: #FFFFFF;
-            font-weight: 400;
-            font-family:  Lato, sans-serif;
-            text-align: center;
-        }
-        .brief a{
-            text-decoration: none;
-            color: #FFFFFF;
-            font-size: 2rem;
-            font-weight: 400;
-            font-family: "Pacifico", cursive;
-        }
-        .dishe{
-            width: 40%;
-            height: 50dvh;
-            border-radius: 1.25rem;
-            background: url("Images/dishes.png") no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.25rem;
-            flex-direction: column;
-        }
-        .dishe h3{
-            font-size: 2rem;
-            color: #FFFFFF;
-            font-weight: 400;
-            font-family:  Lato, sans-serif;
-            text-align: center;
-        }
-        .dishe a{
-            text-decoration: none;
-            color: #FFFFFF;
-            font-size: 2rem;
-            font-weight: 400;
-            font-family: "Pacifico", cursive;
-        }
-        .places{
-            width: 40%;
-            height: 50dvh;
-            border-radius: 1.25rem;
-            background: url("Images/Places.png") no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.25rem;
-            flex-direction: column;
-        }
-        .places h3{
-            font-size: 2rem;
-            color: #FFFFFF;
-            font-weight: 400;
-            font-family:  Lato, sans-serif;
-            text-align: center;
-        }
-        .places a{
-            text-decoration: none;
-            color: #FFFFFF;
-            font-size: 2rem;
-            font-weight: 400;
-            font-family: "Pacifico", cursive;
-        }
-        .cultural{
-            width: 40%;
-            height: 50dvh;
-            border-radius: 1.25rem;
-            background: url("Images/cultural.png") no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.25rem;
-            flex-direction: column;
-        }
-        .cultural h3{
-            font-size: 2rem;
-            color: #FFFFFF;
-            font-weight: 400;
-            font-family:  Lato, sans-serif;
-            text-align: center;
-        }
-        .cultural a{
-            text-decoration: none;
-            color: #FFFFFF;
-            font-size: 2rem;
-            font-weight: 400;
-            font-family: "Pacifico", cursive;
-        }
-        @media (1151px < width){
-            .conservation{
-                width: 100%;
-                height: auto;
-                padding: 0 8rem;
-                display: flex;
-                flex-direction: column;
-                gap: 2.5rem;
-            }   
-            body{
-            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
-            width: 100%;
-            height: 480dvh;
-        }
         }
         
-        @media ( 581px < width < 1150px) { /* Tablet and mobile menu button */
-            .menu-toggle {
-                display: block;
-            }
-            .nav-links {
-                height: auto;
-            }
-            .nav-links > ul {
-                display: none;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                padding: 1.25rem 0;
-                align-items: center;
-                gap: 0.625rem;
-                background-color: rgba(255, 255, 255, 0.95);
-                position: absolute;
-                top: 10dvh;
-                left: 0;
-                z-index: 99;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-            .nav-links > ul.show {
-                display: flex;
-            }
-            nav{
-                margin-bottom: 4rem;
-            }
-            .detail-conservation{
-                flex-direction: column;
-            }
-            .conservation{
-                padding: 0 4rem;
-            }
-            body{
-            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
-            width: 100%;
-            height: 570dvh;
-        }
-        }
-        
-        @media (width < 580px) { /* Mobile responsive */
-            .nav-links{
-                height: auto;
-            }
-            .nav-links > ul{
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                padding: 1.25rem 0;
-                align-items: center;
-                gap: 0.625rem;
-            }
-            .hero-section > h1 {
-                font-size: 2.5rem;
-            }
-            .hero-section > h3 {
-                font-size: 1.5rem;
-            }
-            nav{
-                margin-bottom: 4rem;
-            }
-            .brief, .dishe, .places, .cultural{
-                width: 450px;
-            }
-            .conservation{
-                padding: 0 2rem;
-            }
-            body{
-            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
-            width: 100%;
-            height: 800dvh;
-            }
-            .detail-conservation{
-                flex-direction: column;
-            }
-        }
-        
-        .nav-links > ul > li > a{
+        .nav-links > ul > li > a {
             text-decoration: none;
             color: #333333;
             font-size: 1.25rem;
@@ -276,9 +75,25 @@
             padding: 0.5rem 0.75rem;
             transition: background-color 0.3s, color 0.3s;
         }
-        .hero-section{
+        
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 5vh;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: #333333;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            padding: 0.5rem;
+        }
+        
+        /* Hero section */
+        .hero-section {
             width: 90%;
-            height: 80dvh;
+            min-height: 60vh;
             background-image: url('./Images/image_hero.png');
             background-size: cover;
             background-position: center;
@@ -290,20 +105,24 @@
             align-items: center;
             flex-direction: column;
             gap: 1.25rem;
+            padding: 2rem;
         }
-        .hero-section > h1{
+        
+        .hero-section > h1 {
             color: #FFFFFF;
             font-size: 4rem;
             font-family: Playfair Display, serif;
             text-align: center;
         }
-        .hero-section > h3{
+        
+        .hero-section > h3 {
             color: #FFFFFF;
             font-size: 2.5rem;
             font-family: Playfair Display, serif;
             text-align: center;
         }
-        .hero-section > button{
+        
+        .hero-section > button {
             background-color: #1A73E8;
             color: #FFFFFF;
             font-size: 1.5rem;
@@ -316,13 +135,88 @@
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
-        .conservation h1{
+        
+        /* Banner section */
+        .baniere img {
+            width: 100%;
+            height: 40vh;
+            margin: 20px 0;
+            object-fit: cover;
+        }
+        
+        /* Service section */
+        .service {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.25rem;
+            padding: 1.25rem;
+        }
+        
+        .brief, .dishe, .places, .cultural {
+            width: 22%;
+            min-height: 300px;
+            border-radius: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-direction: column;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .brief {
+            background: url("Images/brief.png") no-repeat center center/cover;
+        }
+        
+        .dishe {
+            background: url("Images/dishes.png") no-repeat center center/cover;
+        }
+        
+        .places {
+            background: url("Images/places.png") no-repeat center center/cover;
+        }
+        
+        .cultural {
+            background: url("Images/cultural.png") no-repeat center center/cover;
+        }
+        
+        .brief h3, .dishe h3, .places h3, .cultural h3 {
+            font-size: 2rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: Lato, sans-serif;
+            text-align: center;
+        }
+        
+        .brief a, .dishe a, .places a, .cultural a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: "Pacifico", cursive;
+        }
+        
+        /* Conservation section */
+        .conservation {
+            width: 100%;
+            height: auto;
+            padding: 0 8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        
+        .conservation h1 {
             font-size: 4rem;
             color: #FFFFFF;
             font-weight: 400;
             font-family: Playfair Display, serif;
         }
-        .detail-conservation{
+        
+        .detail-conservation {
             width: 100%;
             height: auto;
             gap: 1.25rem;
@@ -331,33 +225,58 @@
             justify-content: center;
             align-items: center;
         }
-        .detail-conservation article p{
+        
+        .detail-conservation img {
+            width: 50%;
+            height: auto;
+            max-height: 50vh;
+            object-fit: cover;
+        }
+        
+        .detail-conservation article {
+            width: 50%;
+        }
+        
+        .detail-conservation article p {
             color: #FFFFFF;
             font-size: 2rem;
             font-weight: 400;
             font-family: Lato, sans-serif;
             margin-bottom: 1.25rem;
         }
-        footer{
+        
+        /* Footer styles */
+        footer {
             width: 100%;
-            height: 40dvh;
+            min-height: 40vh;
             background-color: #1A73E8;
             display: flex;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
         }
-        footer ul{
+        
+        footer ul {
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
+            flex: 1;
             justify-content: center;
             align-items: center;
             gap: 1rem;
             list-style: none;
         }
-        footer ul li a{
+        
+        footer ul li a {
             text-decoration: none;
             color: #FFFFFF;
+            font-size: 1.1rem;
+            transition: color 0.3s;
         }
-        footer .adresse{
+        
+        footer ul li a:hover {
+            color: #e0e0e0;
+        }
+        
+        footer .adresse {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -365,13 +284,267 @@
             gap: 1rem;
             color: #FFFFFF;
         }
-        footer .Rights{
+        
+        footer .adresse span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        footer .adresse span i {
+            width: 20px;
+        }
+        
+        footer .Rights {
             flex: 1;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
-        .Rights p{
+        
+        .Rights p {
             color: #FFFFFF;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        /* Desktop (larger than 1150px) */
+        @media (min-width: 1151px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        
+        /* Tablet and small desktop (768px to 1150px) */
+        @media (max-width: 1150px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links > ul {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 1.25rem 0;
+                align-items: center;
+                gap: 0.625rem;
+                background-color: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 10vh;
+                left: 0;
+                z-index: 99;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links > ul.show {
+                display: flex;
+            }
+            
+            .conservation {
+                padding: 0 4rem;
+            }
+            
+            .hero-section > h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 2rem;
+            }
+            
+            .brief, .dishe, .places, .cultural {
+                width: 45%;
+            }
+            
+            .brief h3, .dishe h3, .places h3, .cultural h3,
+            .brief a, .dishe a, .places a, .cultural a {
+                font-size: 1.8rem;
+            }
+            
+            .conservation h1 {
+                font-size: 3.5rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Medium tablet (768px to 992px) */
+        @media (max-width: 992px) {
+            .hero-section > h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.8rem;
+            }
+            
+            .conservation h1 {
+                font-size: 3rem;
+            }
+            
+            .detail-conservation {
+                flex-direction: column;
+            }
+            
+            .detail-conservation img,
+            .detail-conservation article {
+                width: 100%;
+            }
+            
+            footer {
+                flex-wrap: wrap;
+            }
+            
+            footer ul, footer .adresse {
+                flex: 0 0 50%;
+                padding: 1rem;
+            }
+            
+            footer .Rights {
+                flex: 0 0 100%;
+                margin-top: 1rem;
+            }
+        }
+        
+        /* Mobile (less than 768px) */
+        @media (max-width: 768px) {
+            nav {
+                margin-bottom: 1rem;
+            }
+            
+            .hero-section {
+                min-height: 50vh;
+                padding: 1.5rem;
+            }
+            
+            .hero-section > h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-section > button {
+                font-size: 1.2rem;
+                padding: 0.6rem 1.2rem;
+            }
+            
+            .brief, .dishe, .places, .cultural {
+                width: 100%;
+                min-height: 250px;
+            }
+            
+            .brief h3, .dishe h3, .places h3, .cultural h3 {
+                font-size: 1.6rem;
+            }
+            
+            .brief a, .dishe a, .places a, .cultural a {
+                font-size: 1.6rem;
+            }
+            
+            .conservation {
+                padding: 0 2rem;
+            }
+            
+            .conservation h1 {
+                font-size: 2.5rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1.5rem;
+            }
+            
+            .baniere img {
+                height: 30vh;
+            }
+            
+            footer {
+                flex-direction: column;
+            }
+            
+            footer ul, footer .adresse, footer .Rights {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            footer .adresse {
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
+        /* Small mobile (less than 580px) */
+        @media (max-width: 580px) {
+            .hero-section > h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.3rem;
+            }
+            
+            .hero-section > button {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .conservation h1 {
+                font-size: 2rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1.2rem;
+            }
+            
+            .baniere img {
+                height: 25vh;
+            }
+        }
+        
+        /* Extra small mobile (less than 480px) */
+        @media (max-width: 480px) {
+            .head-top p {
+                font-size: 1rem;
+            }
+            
+            .hero-section {
+                min-height: 40vh;
+                padding: 1rem;
+            }
+            
+            .hero-section > h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.1rem;
+            }
+            
+            .conservation {
+                padding: 0 1rem;
+            }
+            
+            .conservation h1 {
+                font-size: 1.8rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1rem;
+            }
+            
+            footer {
+                padding: 1.5rem 0.5rem;
+            }
+            
+            footer ul li a, footer .adresse span, .Rights p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
