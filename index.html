@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Images/seafood-favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Seafood in Mahajanga | Home</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(160deg, #FF8C82 15%, #0A2F5A 27%);
+            width: 100%;
+            min-height: 100vh;
+            font-family: Lato, sans-serif;
+        }
+        
+        /* Navigation styles */
+        nav {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+        
+        .head-top {
+            width: 100%;
+            height: 5vh;
+            background-color: #1A73E8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .head-top p {
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            font-family: "Pacifico", cursive;
+        }
+        
+        .nav-links {
+            width: 100%;
+            height: 10vh;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-links > ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            list-style: none;
+        }
+        
+        .nav-links > ul > li > a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 1.25rem;
+            font-family: Lato, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding: 0.5rem 0.75rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 5vh;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: #333333;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            padding: 0.5rem;
+        }
+        
+        /* Hero section */
+        .hero-section {
+            width: 90%;
+            min-height: 60vh;
+            background-image: url('./Images/image_hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 1.25rem;
+            margin: 1.25rem auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.25rem;
+            padding: 2rem;
+        }
+        
+        .hero-section > h1 {
+            color: #FFFFFF;
+            font-size: 4rem;
+            font-family: Playfair Display, serif;
+            text-align: center;
+        }
+        
+        .hero-section > h3 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+            font-family: Playfair Display, serif;
+            text-align: center;
+        }
+        
+        .hero-section > button {
+            background-color: #1A73E8;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            font-family: "Pacifico", cursive;
+            font-weight: 600;
+            font-style: normal;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Banner section */
+        .baniere img {
+            width: 100%;
+            height: 40vh;
+            margin: 20px 0;
+            object-fit: cover;
+        }
+        
+        /* Service section */
+        .service {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.25rem;
+            padding: 1.25rem;
+        }
+        
+        .brief, .dishe, .places, .cultural {
+            width: 22%;
+            min-height: 300px;
+            border-radius: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-direction: column;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .brief {
+            background: url("Images/brief.png") no-repeat center center/cover;
+        }
+        
+        .dishe {
+            background: url("Images/dishes.png") no-repeat center center/cover;
+        }
+        
+        .places {
+            background: url("Images/places.png") no-repeat center center/cover;
+        }
+        
+        .cultural {
+            background: url("Images/cultural.png") no-repeat center center/cover;
+        }
+        
+        .brief h3, .dishe h3, .places h3, .cultural h3 {
+            font-size: 2rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: Lato, sans-serif;
+            text-align: center;
+        }
+        
+        .brief a, .dishe a, .places a, .cultural a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: "Pacifico", cursive;
+        }
+        
+        /* Conservation section */
+        .conservation {
+            width: 100%;
+            height: auto;
+            padding: 0 8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        
+        .conservation h1 {
+            font-size: 4rem;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-family: Playfair Display, serif;
+        }
+        
+        .detail-conservation {
+            width: 100%;
+            height: auto;
+            gap: 1.25rem;
+            display: flex;
+            padding: 1.25rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .detail-conservation img {
+            width: 50%;
+            height: auto;
+            max-height: 50vh;
+            object-fit: cover;
+        }
+        
+        .detail-conservation article {
+            width: 50%;
+        }
+        
+        .detail-conservation article p {
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: Lato, sans-serif;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Footer styles */
+        footer {
+            width: 100%;
+            min-height: 40vh;
+            background-color: #1A73E8;
+            display: flex;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer ul {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        footer ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        footer ul li a:hover {
+            color: #e0e0e0;
+        }
+        
+        footer .adresse {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            color: #FFFFFF;
+        }
+        
+        footer .adresse span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        footer .adresse span i {
+            width: 20px;
+        }
+        
+        footer .Rights {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .Rights p {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        /* Desktop (larger than 1150px) */
+        @media (min-width: 1151px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        
+        /* Tablet and small desktop (768px to 1150px) */
+        @media (max-width: 1150px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links > ul {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 1.25rem 0;
+                align-items: center;
+                gap: 0.625rem;
+                background-color: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 10vh;
+                left: 0;
+                z-index: 99;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links > ul.show {
+                display: flex;
+            }
+            
+            .conservation {
+                padding: 0 4rem;
+            }
+            
+            .hero-section > h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 2rem;
+            }
+            
+            .brief, .dishe, .places, .cultural {
+                width: 45%;
+            }
+            
+            .brief h3, .dishe h3, .places h3, .cultural h3,
+            .brief a, .dishe a, .places a, .cultural a {
+                font-size: 1.8rem;
+            }
+            
+            .conservation h1 {
+                font-size: 3.5rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Medium tablet (768px to 992px) */
+        @media (max-width: 992px) {
+            .hero-section > h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.8rem;
+            }
+            
+            .conservation h1 {
+                font-size: 3rem;
+            }
+            
+            .detail-conservation {
+                flex-direction: column;
+            }
+            
+            .detail-conservation img,
+            .detail-conservation article {
+                width: 100%;
+            }
+            
+            footer {
+                flex-wrap: wrap;
+            }
+            
+            footer ul, footer .adresse {
+                flex: 0 0 50%;
+                padding: 1rem;
+            }
+            
+            footer .Rights {
+                flex: 0 0 100%;
+                margin-top: 1rem;
+            }
+        }
+        
+        /* Mobile (less than 768px) */
+        @media (max-width: 768px) {
+            nav {
+                margin-bottom: 1rem;
+            }
+            
+            .hero-section {
+                min-height: 50vh;
+                padding: 1.5rem;
+            }
+            
+            .hero-section > h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-section > button {
+                font-size: 1.2rem;
+                padding: 0.6rem 1.2rem;
+            }
+            
+            .brief, .dishe, .places, .cultural {
+                width: 100%;
+                min-height: 250px;
+            }
+            
+            .brief h3, .dishe h3, .places h3, .cultural h3 {
+                font-size: 1.6rem;
+            }
+            
+            .brief a, .dishe a, .places a, .cultural a {
+                font-size: 1.6rem;
+            }
+            
+            .conservation {
+                padding: 0 2rem;
+            }
+            
+            .conservation h1 {
+                font-size: 2.5rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1.5rem;
+            }
+            
+            .baniere img {
+                height: 30vh;
+            }
+            
+            footer {
+                flex-direction: column;
+            }
+            
+            footer ul, footer .adresse, footer .Rights {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            footer .adresse {
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
+        /* Small mobile (less than 580px) */
+        @media (max-width: 580px) {
+            .hero-section > h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.3rem;
+            }
+            
+            .hero-section > button {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .conservation h1 {
+                font-size: 2rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1.2rem;
+            }
+            
+            .baniere img {
+                height: 25vh;
+            }
+        }
+        
+        /* Extra small mobile (less than 480px) */
+        @media (max-width: 480px) {
+            .head-top p {
+                font-size: 1rem;
+            }
+            
+            .hero-section {
+                min-height: 40vh;
+                padding: 1rem;
+            }
+            
+            .hero-section > h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-section > h3 {
+                font-size: 1.1rem;
+            }
+            
+            .conservation {
+                padding: 0 1rem;
+            }
+            
+            .conservation h1 {
+                font-size: 1.8rem;
+            }
+            
+            .detail-conservation article p {
+                font-size: 1rem;
+            }
+            
+            footer {
+                padding: 1.5rem 0.5rem;
+            }
+            
+            footer ul li a, footer .adresse span, .Rights p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="head-top"><p>Seafood in Mahajanga</p></div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <ul id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/introduction.html">Introduction</a></li>
+                <li><a href="/seafood_dishes.html">Seafood Dishes</a></li>
+                <li><a href="/where_to_eat.html">Where to Eat</a></li>
+                <li><a href="/culture.html">Culture</a></li>
+                <li><a href="/sustainability.html">Sustainability</a></li>
+                <li><a href="/conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <h1>Discover the Flavors of Mahajanga</h1>
+            <h3>Explore the freshest seafood from the <br> Mozambique Channel.</h3>
+            <button>Explore Now</button>
+        </section>
+        <section class="baniere">
+            <img src="./Images/bannière.png" alt="Baniere Image" style="width:100%; height:40dvh;margin: 20px 0;object-fit: cover;">
+        </section>
+        <section class="service">
+            <div class="brief">
+                <h3>A brief overview of Mahajanga’s seafood scene.</h3>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="dishe">
+                <h3>Must-Try Seafood Dishes in Mahajanga.</h3>
+                <a href="#">Explore Dishes</a>
+            </div>
+            <div class="places">
+                <h3>Best Places to Enjoy Seafood in Mahajanga.</h3>
+                <a href="#">Find Locations</a>
+            </div>
+            <div class="cultural">
+                <h3>The Cultural Connection of Seafood in Mahajanga.</h3>
+                <a href="#">Discover Culture</a>
+            </div>
+        </section>
+        <section class="conservation">
+            <h1>Sustainability and Conservation</h1>
+            <div class="detail-conservation">
+                <img src="/Images/conservation.png" alt="coucher de soleil a Mahajanga" style="width: 100%; height: 50dvh;object-fit: cover;">
+                <article>
+                    <p>As the demand for seafood grows, so does the importance of sustainable fishing practices. Many locals in Mahajanga are committed to preserving their marine resources, ensuring that future generations can continue to enjoy the bounty of the sea.</p>
+                    <p>When dining in Mahajanga, consider supporting restaurants and vendors that prioritize sustainability.</p>
+                </article>
+            </div>
+            <h1>Final Thoughts</h1>
+            <div class="detail-conservation">
+                <img src="/Images/local.png" alt="coucher de soleil a Mahajanga" style="width: 100%; height: 50dvh;object-fit: cover;">
+                <article>
+                    <p>Mahajanga is a seafood lover’s paradise, offering a unique blend of flavors, traditions, and breathtaking scenery. Whether you’re savoring a plate of grilled lobster by the beach or exploring the vibrant local markets, the seafood in Mahajanga is sure to leave a lasting impression.</p>
+                    <p> So, pack your appetite and get ready to embark on a culinary journey through one of Madagascar’s most enchanting coastal cities.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/seafood_dishes.html">Seafood Dishes</a>
+            </li>
+            <li>
+                <a href="/where_to_eat.html">Where to Eat</a>
+            </li>
+            <li>
+                <a href="/culture.html">Culture</a>
+            </li>
+            <li>
+                <a href="/sustainability.html">Sustainability</a>
+            </li>
+            <li>
+                <a href="/conclusion.html">Conclusion</a>
+            </li>
+        </ul>
+        <div class="adresse">
+            <span><i class="fa-regular fa-envelope"></i>SeafoodinMahajanga@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i>+261 32 97 19391</span>
+            <span>Tsaramandroso Ambany Mahajanga I, Madagascar</span>
+        </div>
+        <div class="Rights">
+            <p>@2025 seafood All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                
+                // Change icon based on menu state
+                const icon = menuToggle.querySelector('i');
+                if (navMenu.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-links ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navMenu.classList.remove('show');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('show');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
