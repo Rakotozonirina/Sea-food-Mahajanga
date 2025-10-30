@@ -10,19 +10,86 @@
         padding: 0;
         margin: 0;
     }
+    /* Navigation styles */
+        nav {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+        
+        .head-top {
+            width: 100%;
+            height: 5vh;
+            background-color: #1A73E8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .head-top p {
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            font-family: "Pacifico", cursive;
+        }
+        
+        .nav-links {
+            width: 100%;
+            height: 10vh;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-links > ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            list-style: none;
+        }
+        
+        .nav-links > ul > li > a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 1.25rem;
+            font-family: Lato, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding: 0.5rem 0.75rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 5vh;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: #333333;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            padding: 0.5rem;
+        }
+
     body{
         background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
         width: 100%;
-        height: 400vh;
+        min-height: 100vh;
     }
     main{
         width: 100%;
-        height: 400vh;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 2.5rem;
+        padding: 2rem 0;
     }
 
     main h1{
@@ -44,6 +111,7 @@
         justify-content: center;
         gap: 20px;
         padding: 0 4rem;
+        margin-bottom: 2rem;
     }
 
     .image1{
@@ -55,6 +123,7 @@
         height: 50dvh;
         display: block;
         border-radius: 25px;
+        object-fit: cover;
     }
 
     .text{
@@ -66,40 +135,275 @@
     .text h3{
         font-weight: 400;
         font-family: Lato, sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
     }
 
+     /* Footer styles */
+        footer {
+            width: 100%;
+            min-height: 40vh;
+            background-color: #1A73E8;
+            display: flex;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer ul {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        footer ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        footer ul li a:hover {
+            color: #e0e0e0;
+        }
+        
+        footer .adresse {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            color: #FFFFFF;
+        }
+        
+        footer .adresse span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        footer .adresse span i {
+            width: 20px;
+        }
+        
+        footer .Rights {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .Rights p {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+         /* Desktop (larger than 1150px) */
+        @media (min-width: 1151px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        
+        /* Tablet and small desktop (768px to 1150px) */
+        @media (max-width: 1150px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links > ul {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 1.25rem 0;
+                align-items: center;
+                gap: 0.625rem;
+                background-color: rgba(255, 255, 255, 0.95);
+                position: absolute;
+                top: 10vh;
+                left: 0;
+                z-index: 99;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links > ul.show {
+                display: flex;
+            }
+            
+            main h1 {
+                font-size: 3.5rem;
+                width: 80%;
+            }
+            
+            main h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Medium tablet (768px to 992px) */
+        @media (max-width: 992px) {
+            footer {
+                flex-wrap: wrap;
+            }
+            
+            footer ul, footer .adresse {
+                flex: 0 0 50%;
+                padding: 1rem;
+            }
+            
+            footer .Rights {
+                flex: 0 0 100%;
+                margin-top: 1rem;
+            }
+            
+            main h1 {
+                font-size: 3rem;
+            }
+            
+            main h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* Mobile (less than 768px) */
+        @media (max-width: 768px) {
+            nav {
+                margin-bottom: 1rem;
+            }
+            
+            footer {
+                flex-direction: column;
+            }
+            
+            footer ul, footer .adresse, footer .Rights {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            footer .adresse {
+                align-items: center;
+                text-align: center;
+            }
+            
+            main h1 {
+                font-size: 2.5rem;
+                width: 90%;
+            }
+            
+            main h2 {
+                font-size: 2rem;
+                text-align: center;
+                padding: 1rem 0;
+            }
+        }
+        
+        /* Small mobile (less than 580px) */
+        @media (max-width: 580px) {
+            main h1 {
+                font-size: 2rem;
+            }
+            
+            main h2 {
+                font-size: 1.8rem;
+            }
+            
+            .text h3 {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Extra small mobile (less than 480px) */
+        @media (max-width: 480px) {
+            .head-top p {
+                font-size: 1rem;
+            }
+            
+            footer {
+                padding: 1.5rem 0.5rem;
+            }
+            
+            footer ul li a, footer .adresse span, .Rights p {
+                font-size: 0.9rem;
+            }
+            
+            main h1 {
+                font-size: 1.8rem;
+            }
+            
+            main h2 {
+                font-size: 1.6rem;
+            }
+            
+            .text h3 {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Responsive container for dishes page */
         @media(max-width:1160px){
-        .container{
-            flex-direction: column;
+            .container{
+                flex-direction: column;
+            }
+            main{
+                min-height: 140vh;
+            }
+            body{
+                min-height: 140vh;
+            }
+            main h1{
+                text-align: center;
+            }
+            .text {
+                padding-top: 1rem;
+                margin-right: 0;
+            }
         }
-        main{
-            height: 140vh;
-        }
-        body{
-            height: 140vh;
-        }
-        main h1{
-            text-align: start;
-        }
-    }
 
-    @media(max-width:580px){
-        .container{
-            flex-direction: column;
+        @media(max-width:580px){
+            .container{
+                flex-direction: column;
+                padding: 0 2rem;
+            }
+            main{
+                min-height: 200vh;
+            }
+            body{
+                min-height: 200vh;
+            }
+            main h1{
+                text-align: center;
+            }
+            .image1 img {
+                height: 40dvh;
+            }
         }
-        main{
-            height: 200vh;
-        }
-        body{
-            height: 200vh;
-        }
-        main h1{
-            text-align: start;
-        }
-    }
 </style>
 </head>
 <body>
+    <nav>
+        <div class="head-top"><p>Seafood in Mahajanga</p></div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <ul id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/introduction.html">Introduction</a></li>
+                <li><a href="/dishes.html">Seafood Dishes</a></li>
+                <li><a href="/where_to_eat.html">Where to Eat</a></li>
+                <li><a href="/culture.html">Culture</a></li>
+                <li><a href="/sustainability.html">Sustainability</a></li>
+                <li><a href="/conclusion.html">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
          <h1>Must-Try Seafood Dishes in Mahajanga</h1>
          <div class="container">
@@ -108,9 +412,8 @@
                 <h2>
                 Grilled Lobster (Omasa)
                 </h2>
-                <img src="Screenshot_20251018-094836.png" alt="image">
+                <img src="Image 1.jpg" alt="image">
             </div>
-
 
             <div class="text">
                 <h3>
@@ -125,9 +428,8 @@
                 <h2>
                 Coconut Crab Curry (Crab au Cocotier)
                 </h2>
-                <img src="Screenshot_20251018-094836.png" alt="image">
+                <img src="Image 2.jpg" alt="image">
             </div>
-
 
             <div class="text">
                 <h3>
@@ -143,9 +445,8 @@
                 <h2>
                 Octopus Salad (Salad de Poulpe)
                 </h2>
-                <img src="Screenshot_20251018-094836.png" alt="image">
+                <img src="Image 3.jpg" alt="image">
             </div>
-
 
             <div class="text">
                 <h3>
@@ -161,14 +462,14 @@
                 <h2>
                 Fried Shrimp with Garlic Butter (Crevettes à l'Ail)
                 </h2>
-                <img src="Screenshot_20251018-094836.png" alt="image">
+                <img src="Image 4.jpg" alt="image">
             </div>
-
 
             <div class="text">
                 <h3>
                 Juicy shrimp are sautéed in garlic butter and served with a side of cripsy fries or steamed vegetables.
                 <br><br>Simple yet incredibly flavorful, this dish highlights the natural sweetness of the shrimp.
+                </h3>
             </div>
         </div>
     
@@ -178,16 +479,50 @@
                 <h2>
                 Fish Kebabs (Brochettes de Poisson)
                 </h2>
-                <img src="Screenshot_20251018-094836.png" alt="image">
+                <img src="Image 5.jpg" alt="image">
             </div>
-
 
             <div class="text">
                 <h3>
                 Freshly caught fish is marinated in a blend of spices skewered, and grilled to perfection.
                 <br><br>Often served with a spicy chili sauce or a tangy tamarind glaze, these kebabs are a popular street food option.
+                </h3>
             </div>
         </div>
     </main>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/seafood_dishes.html">Seafood Dishes</a>
+            </li>
+            <li>
+                <a href="/where_to_eat.html">Where to Eat</a>
+            </li>
+            <li>
+                <a href="/culture.html">Culture</a>
+            </li>
+            <li>
+                <a href="/sustainability.html">Sustainability</a>
+            </li>
+            <li>
+                <a href="/conclusion.html">Conclusion</a>
+            </li>
+        </ul>
+        <div class="adresse">
+            <span><i class="fa-regular fa-envelope"></i>SeafoodinMahajanga@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i>+261 32 97 19391</span>
+            <span>Tsaramandroso Ambany Mahajanga I, Madagascar</span>
+        </div>
+        <div class="Rights">
+            <p>@2025 seafood All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
 </html>
