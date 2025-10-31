@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Introduction| Seafood in Mahajanga</title>
-<style>
-    *{
+    <title>Where to eat | Seafood in Mahajanga</title>
+    <style>
+        *{
         box-sizing: border-box;
         padding: 0;
         margin: 0;
@@ -81,57 +81,12 @@
             padding: 0.5rem;
         }
     body{
-        background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
+        background: linear-gradient(120deg, #ff8c82 15%, #0a2f5a 25%);
         width: 100%;
-        min-height: 100vh;
-    }
-    main{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    main h1{
-        width: 60%;
-        color: white;
-        font-size: 50px;
-        text-align: center;
-    }
-
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 0 4rem;
-    }
-
-    .image1{
-        flex: 1;
-    }
-
-    .image1 img{
-        width: 100%;
-        height: 50dvh;
-        display: block;
-        border-radius: 25px;
-    }
-
-    .text{
-        flex: 1;
-        color: white;
-        margin-right: 4%;
-    }
-    .text h3{
-        font-weight: 400;
-        font-family: Lato, sans-serif;
+        min-height: 200vh;
     }
     /* Footer styles */
-        footer {
+    footer {
             width: 100%;
             min-height: 40vh;
             background-color: #1A73E8;
@@ -239,6 +194,9 @@
                 flex: 0 0 100%;
                 margin-top: 1rem;
             }
+            .place{
+                padding: 2rem 5rem;
+            }
         }
         /* Mobile (less than 768px) */
         @media (max-width: 768px) {
@@ -259,6 +217,9 @@
                 align-items: center;
                 text-align: center;
             }
+            .place{
+                padding: 2rem 2rem;
+            }
         }
         @media (max-width: 480px) {
             .head-top p {
@@ -271,37 +232,45 @@
             footer ul li a, footer .adresse span, .Rights p {
                 font-size: 0.9rem;
             }
+            .place{
+                padding: 2rem 1rem;
+            }
         }
-        @media(max-width:1160px){
-        .container{
+        .main-top{
+            width: 100%;
+            min-height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
         }
-        main{
-            min-height: 140vh;
+        .main-top h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #FFFFFF;
         }
-        body{
-            min-height: 140vh;
-        }
-        main h1{
-            text-align: start;
-        }
-    }
-
-    @media(max-width:580px){
-        .container{
+        .place{
+            width: 100%;
+            min-height: 100vh;
+            padding: 2rem 2rem;
+            display: flex;
             flex-direction: column;
+            gap: 1rem;
         }
-        main{
-            min-height: 200vh;
+        .place h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #FFFFFF;
         }
-        body{
-            min-height: 200vh;
+        .place p{
+            font-family: Lato, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #FFFFFF;
         }
-        main h1{
-            text-align: start;
-        }
-    }
-</style>
+    </style>
 </head>
 <body>
     <nav>
@@ -322,21 +291,24 @@
         </div>
     </nav>
     <main>
-         <h1>Exploring the Seafood Delights of Mahajanga, Madagascar</h1>
-         <div class="container">
-            <div class="image1">
-                <img src="Screenshot_20251018-094836.png" alt="image">
-            </div>
-
-
-            <div class="text">
-                <h3>
-                Nestled along the picturesque northwest coast of Madagascar, Mahajanga is a vibrant port city that boasts a rich cultural heritage, stunning beaches, and a culinary scene that seaffod lovers dream of.
-                <br><br>Known for its warm climate, laid-back atmosphere, and promixity to the Mozambique Channel, Mahajanga is a paradise for those seeking fresh, flavortful, and diverse seafood dishes. Let's dive into the culinary treasure of this coastalgem.
-                </h3>
-            </div>
+        <div class="main-top">
+            <h1>Where to Enjoy Seafood in Mahajanga</h1>
         </div>
-        
+        <section class="place">
+            <h1>Beachside Restaurants</h1>
+            <img src="./Images/beachside.png" alt="beachside restaurants">
+            <p> Many restaurants along the coastline offer stunning views of the ocean along with their seafood specialties. Dining here as the sun sets over the water is an unforgettable experience.</p>
+        </section>
+        <section class="place">
+            <h1>Local Markets</h1>
+            <img src="./Images/localmarket.png" alt="local market">
+            <p> The bustling markets of Mahajanga are a great place to sample fresh seafood. Vendors often grill fish and shellfish right on the spot, allowing you to enjoy a quick and tasty meal.</p>
+        </section>
+        <section class="place">
+            <h1>Fishing Villages</h1>
+            <img src="./Images/fishingvillage.png" alt="fishing villages">
+            <p> For a more authentic experience, visit the nearby fishing villages where you can watch fishermen bring in their daily catch and enjoy seafood prepared in traditional Malagasy style.</p>
+        </section>
     </main>
     <footer>
         <ul>
