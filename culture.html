@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./Images/seafood-favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Dishes| Seafood in Mahajanga</title>
+    <title>Introduction| Seafood in Mahajanga</title>
 <style>
     *{
         box-sizing: border-box;
@@ -80,7 +80,6 @@
             z-index: 100;
             padding: 0.5rem;
         }
-
     body{
         background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
         width: 100%;
@@ -88,13 +87,12 @@
     }
     main{
         width: 100%;
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 2.5rem;
-        padding: 2rem 0;
     }
 
     main h1{
@@ -104,19 +102,12 @@
         text-align: center;
     }
 
-    main h2{
-        color: white;
-        padding: 1.7rem 0;
-        font-size: 35px;
-    }
-
     .container{
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
         padding: 0 4rem;
-        margin-bottom: 2rem;
     }
 
     .image1{
@@ -128,23 +119,18 @@
         height: 50dvh;
         display: block;
         border-radius: 25px;
-        object-fit: cover;
     }
 
     .text{
         flex: 1;
         color: white;
         margin-right: 4%;
-        padding-top: 5rem;
     }
     .text h3{
         font-weight: 400;
         font-family: Lato, sans-serif;
-        font-size: 1.2rem;
-        line-height: 1.6;
     }
-
-     /* Footer styles */
+    /* Footer styles */
         footer {
             width: 100%;
             min-height: 40vh;
@@ -207,14 +193,12 @@
             font-size: 1.1rem;
             text-align: center;
         }
-
-         /* Desktop (larger than 1150px) */
+/* Desktop (larger than 1150px) */
         @media (min-width: 1151px) {
             .menu-toggle {
                 display: none;
             }
         }
-        
         /* Tablet and small desktop (768px to 1150px) */
         @media (max-width: 1150px) {
             .menu-toggle {
@@ -240,19 +224,8 @@
             .nav-links > ul.show {
                 display: flex;
             }
-            
-            main h1 {
-                font-size: 3.5rem;
-                width: 80%;
-            }
-            
-            main h2 {
-                font-size: 2.5rem;
-            }
         }
-        
-        /* Medium tablet (768px to 992px) */
-        @media (max-width: 992px) {
+        @media (max-width:992px){
             footer {
                 flex-wrap: wrap;
             }
@@ -266,22 +239,12 @@
                 flex: 0 0 100%;
                 margin-top: 1rem;
             }
-            
-            main h1 {
-                font-size: 3rem;
-            }
-            
-            main h2 {
-                font-size: 2.2rem;
-            }
         }
-        
         /* Mobile (less than 768px) */
         @media (max-width: 768px) {
             nav {
                 margin-bottom: 1rem;
             }
-            
             footer {
                 flex-direction: column;
             }
@@ -296,40 +259,11 @@
                 align-items: center;
                 text-align: center;
             }
-            
-            main h1 {
-                font-size: 2.5rem;
-                width: 90%;
-            }
-            
-            main h2 {
-                font-size: 2rem;
-                text-align: center;
-                padding: 1rem 0;
-            }
         }
-        
-        /* Small mobile (less than 580px) */
-        @media (max-width: 580px) {
-            main h1 {
-                font-size: 2rem;
-            }
-            
-            main h2 {
-                font-size: 1.8rem;
-            }
-            
-            .text h3 {
-                font-size: 1.1rem;
-            }
-        }
-        
-        /* Extra small mobile (less than 480px) */
         @media (max-width: 480px) {
             .head-top p {
                 font-size: 1rem;
             }
-            
             footer {
                 padding: 1.5rem 0.5rem;
             }
@@ -337,58 +271,36 @@
             footer ul li a, footer .adresse span, .Rights p {
                 font-size: 0.9rem;
             }
-            
-            main h1 {
-                font-size: 1.8rem;
-            }
-            
-            main h2 {
-                font-size: 1.6rem;
-            }
-            
-            .text h3 {
-                font-size: 1rem;
-            }
         }
-        
-        /* Responsive container for dishes page */
         @media(max-width:1160px){
-            .container{
-                flex-direction: column;
-            }
-            main{
-                min-height: 140vh;
-            }
-            body{
-                min-height: 140vh;
-            }
-            main h1{
-                text-align: center;
-            }
-            .text {
-                padding-top: 1rem;
-                margin-right: 0;
-            }
+        .container{
+            flex-direction: column;
         }
+        main{
+            min-height: 140vh;
+        }
+        body{
+            min-height: 140vh;
+        }
+        main h1{
+            text-align: start;
+        }
+    }
 
-        @media(max-width:580px){
-            .container{
-                flex-direction: column;
-                padding: 0 2rem;
-            }
-            main{
-                min-height: 200vh;
-            }
-            body{
-                min-height: 200vh;
-            }
-            main h1{
-                text-align: center;
-            }
-            .image1 img {
-                height: 40dvh;
-            }
+    @media(max-width:580px){
+        .container{
+            flex-direction: column;
         }
+        main{
+            min-height: 200vh;
+        }
+        body{
+            min-height: 200vh;
+        }
+        main h1{
+            text-align: start;
+        }
+    }
 </style>
 </head>
 <body>
@@ -410,92 +322,22 @@
         </div>
     </nav>
     <main>
-         <h1>Must-Try Seafood Dishes in Mahajanga</h1>
+         <h1>The cultural Connection</h1>
          <div class="container">
-           
             <div class="image1">
-                <h2>
-                Grilled Lobster (Omasa)
-                </h2>
-                <img src="Image 1.jpg" alt="image">
+                <img src="Culture.jpg" alt="image">
             </div>
+
 
             <div class="text">
                 <h3>
-                Lobster is a star of Mahajanga's seafood scene. Often grilled over an open flame and seasoned with local spices, garlic and a squeze of lime, this dish is a must-try for anyyone visiting the city.
-                <br><br>Served with a side of Coconut rice or fresh salad, it's a true taste of the ocean.
-                </h3>
-            </div>
-        </div>
-        <div class="container">
-           
-            <div class="image1">
-                <h2>
-                Coconut Crab Curry (Crab au Cocotier)
-                </h2>
-                <img src="Image 2.jpg" alt="image">
-            </div>
-
-            <div class="text">
-                <h3>
-                Coconut crab, a local delicacy, is often cooked in a rich, creamy cocnut curry infused with ginger, garlic, and chili.
-                <br><br>The sweet and savory flavors of this dish perfectly complement the tender crab meat, making it a favorite among locals and tourists.
+                Srafood in Mahajanga isn't just about the food-it's a way of life. The city's fishing industry plays avital role in the local economy, and many families have been fishing for generations.
+                <br><br>Sharing a seafood meal here is not just a culinary experience but also a way connect with the culture and traditions of the region.
                 </h3>
             </div>
         </div>
         
-        <div class="container">
-           
-            <div class="image1">
-                <h2>
-                Octopus Salad (Salad de Poulpe)
-                </h2>
-                <img src="Image 3.jpg" alt="image">
-            </div>
-
-            <div class="text">
-                <h3>
-                Fresh octopus is boiled until tender, then tossed with tomatoes, onions, green peppers, and a zesty vinaigrette.
-                <br><br>This light and refreshing dish is perfect for a hot day by the beach.
-                </h3>
-            </div>
-        </div>
-
-        <div class="container">
-           
-            <div class="image1">
-                <h2>
-                Fried Shrimp with Garlic Butter (Crevettes à l'Ail)
-                </h2>
-                <img src="Image 4.jpg" alt="image">
-            </div>
-
-            <div class="text">
-                <h3>
-                Juicy shrimp are sautéed in garlic butter and served with a side of cripsy fries or steamed vegetables.
-                <br><br>Simple yet incredibly flavorful, this dish highlights the natural sweetness of the shrimp.
-                </h3>
-            </div>
-        </div>
-    
-         <div class="container">
-           
-            <div class="image1">
-                <h2>
-                Fish Kebabs (Brochettes de Poisson)
-                </h2>
-                <img src="Image 5.jpg" alt="image">
-            </div>
-
-            <div class="text">
-                <h3>
-                Freshly caught fish is marinated in a blend of spices skewered, and grilled to perfection.
-                <br><br>Often served with a spicy chili sauce or a tangy tamarind glaze, these kebabs are a popular street food option.
-                </h3>
-            </div>
-        </div>
     </main>
-
     <footer>
         <ul>
             <li>
