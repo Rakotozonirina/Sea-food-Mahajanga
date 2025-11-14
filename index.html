@@ -308,6 +308,32 @@
             font-size: 1.1rem;
             text-align: center;
         }
+        /* Loader styles */
+        #pageLoader {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 115, 232, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.35s ease;
+        }
+        #pageLoader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #pageLoader .spinner {
+            width: 64px;
+            height: 64px;
+            border: 6px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
         
         /* Desktop (larger than 1150px) */
         @media (min-width: 1151px) {
@@ -549,6 +575,7 @@
     </style>
 </head>
 <body>
+    <div id="pageLoader"><div class="spinner"></div></div>
     <nav>
         <div class="head-top"><p>Seafood in Mahajanga</p></div>
         <button class="menu-toggle" id="menuToggle">
@@ -686,6 +713,12 @@
                     icon.classList.add('fa-bars');
                 }
             });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('pageLoader');
+            if (loader) loader.classList.add('hidden');
         });
     </script>
 </body>
