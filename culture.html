@@ -1,461 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./Images/seafood-favicon.png"
-      type="image/x-icon"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>Introduction| Seafood in Mahajanga</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-      }
-      /* Navigation styles */
-      nav {
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-      }
 
-      .head-top {
-        width: 100%;
-        height: 10vh;
-        background-color: #1a73e8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./Images/seafood-favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Introduction| Seafood in Mahajanga</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
 
-      .head-top p {
-        color: #ffffff;
-        font-size: 1.25rem;
-        font-family: "Pacifico", cursive;
-      }
+    /* Navigation styles */
+    nav {
+      width: 100%;
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
 
-      .nav-links {
-        width: 100%;
-        height: 10vh;
-        background-color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .head-top {
+      width: 100%;
+      height: 10vh;
+      background-color: #1a73e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .nav-links > ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.25rem;
-        list-style: none;
-      }
+    .head-top p {
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-family: "Pacifico", cursive;
+    }
 
-      .nav-links > ul > li > a {
-        text-decoration: none;
-        color: #333333;
-        font-size: 1.25rem;
-        font-family: Lato, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        padding: 0.5rem 0.75rem;
-        transition: background-color 0.3s, color 0.3s;
-      }
+    .nav-links {
+      width: 100%;
+      height: 10vh;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .nav-links>ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+    }
+
+    .nav-links>ul>li>a {
+      text-decoration: none;
+      color: #333333;
+      font-size: 1.25rem;
+      font-family: Lato, sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      padding: 0.5rem 0.75rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 12vh;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: #333333;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 100;
+      padding: 0.5rem;
+    }
+
+    body {
+      background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    main {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    main h1 {
+      width: 60%;
+      color: white;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 4rem;
+    }
+
+    .image1 {
+      flex: 1;
+    }
+
+    .image1 img {
+      width: 100%;
+      height: 50dvh;
+      display: block;
+      border-radius: 25px;
+    }
+
+    .text {
+      flex: 1;
+      color: white;
+      margin-right: 4%;
+    }
+
+    .text h3 {
+      font-weight: 400;
+      font-family: Lato, sans-serif;
+    }
+
+    /* Footer styles */
+    footer {
+      width: 100%;
+      min-height: 40vh;
+      background-color: #1a73e8;
+      display: flex;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+    footer ul {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    footer ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    footer ul li a:hover {
+      color: #e0e0e0;
+    }
+
+    footer .adresse {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      color: #ffffff;
+    }
+
+    footer .adresse span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    footer .adresse span i {
+      width: 20px;
+    }
+
+    footer .Rights {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Rights p {
+      color: #ffffff;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* Loader styles */
+    #pageLoader {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 115, 232, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.35s ease;
+    }
+
+    #pageLoader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #pageLoader .spinner {
+      width: 64px;
+      height: 64px;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Desktop (larger than 1150px) */
+    @media (min-width: 1151px) {
       .menu-toggle {
         display: none;
-        position: absolute;
-        top: 12vh;
-        right: 1rem;
-        background: transparent;
-        border: none;
-        color: #333333;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 100;
-        padding: 0.5rem;
       }
-      body {
-        background: linear-gradient(40deg, #ff8c82 15%, #0a2f5a 25%);
-        width: 100%;
-        min-height: 100vh;
-      }
-      main {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2.5rem;
-      }
+    }
 
-      main h1 {
-        width: 60%;
-        color: white;
-        font-size: 50px;
-        text-align: center;
-      }
-
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 0 4rem;
-      }
-
-      .image1 {
-        flex: 1;
-      }
-
-      .image1 img {
-        width: 100%;
-        height: 50dvh;
+    /* Tablet and small desktop (768px to 1150px) */
+    @media (max-width: 1150px) {
+      .menu-toggle {
         display: block;
-        border-radius: 25px;
       }
 
-      .text {
-        flex: 1;
-        color: white;
-        margin-right: 4%;
-      }
-      .text h3 {
-        font-weight: 400;
-        font-family: Lato, sans-serif;
-      }
-      /* Footer styles */
-      footer {
+      .nav-links>ul {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
-        min-height: 40vh;
-        background-color: #1a73e8;
-        display: flex;
-        padding: 2rem 1rem;
-        margin-top: 2rem;
-      }
-
-      footer ul {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: center;
+        padding: 1.25rem 0;
         align-items: center;
-        gap: 1rem;
-        list-style: none;
+        gap: 0.625rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        z-index: 99;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
-      footer ul li a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 1.1rem;
-        transition: color 0.3s;
+      .nav-links>ul.show {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 992px) {
+      footer {
+        flex-wrap: wrap;
       }
 
-      footer ul li a:hover {
-        color: #e0e0e0;
-      }
-
+      footer ul,
       footer .adresse {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        color: #ffffff;
-      }
-
-      footer .adresse span {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 1.1rem;
-      }
-
-      footer .adresse span i {
-        width: 20px;
+        flex: 0 0 50%;
+        padding: 1rem;
       }
 
       footer .Rights {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex: 0 0 100%;
+        margin-top: 1rem;
+      }
+    }
+
+    /* Mobile (less than 768px) */
+    @media (max-width: 768px) {
+      nav {
+        margin-bottom: 1rem;
       }
 
-      .Rights p {
-        color: #ffffff;
-        font-size: 1.1rem;
+      footer {
+        flex-direction: column;
+      }
+
+      footer ul,
+      footer .adresse,
+      footer .Rights {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 1rem 0;
+      }
+
+      footer .adresse {
+        align-items: center;
         text-align: center;
       }
-      /* Loader styles */
-      #pageLoader {
-        position: fixed;
-        inset: 0;
-        background: rgba(26, 115, 232, 0.9);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: opacity 0.35s ease;
-      }
-      #pageLoader.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      #pageLoader .spinner {
-        width: 64px;
-        height: 64px;
-        border: 6px solid rgba(255, 255, 255, 0.2);
-        border-top-color: #fff;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
+    }
+
+    @media (max-width: 480px) {
+      .head-top p {
+        font-size: 1rem;
       }
 
-      /* Desktop (larger than 1150px) */
-      @media (min-width: 1151px) {
-        .menu-toggle {
-          display: none;
-        }
-      }
-      /* Tablet and small desktop (768px to 1150px) */
-      @media (max-width: 1150px) {
-        .menu-toggle {
-          display: block;
-        }
-
-        .nav-links > ul {
-          display: none;
-          flex-direction: column;
-          justify-content: center;
-          width: 100%;
-          padding: 1.25rem 0;
-          align-items: center;
-          gap: 0.625rem;
-          background-color: rgba(255, 255, 255, 0.95);
-          position: absolute;
-          top: 10vh;
-          left: 0;
-          z-index: 99;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-links > ul.show {
-          display: flex;
-        }
-      }
-      @media (max-width: 992px) {
-        footer {
-          flex-wrap: wrap;
-        }
-
-        footer ul,
-        footer .adresse {
-          flex: 0 0 50%;
-          padding: 1rem;
-        }
-
-        footer .Rights {
-          flex: 0 0 100%;
-          margin-top: 1rem;
-        }
-      }
-      /* Mobile (less than 768px) */
-      @media (max-width: 768px) {
-        nav {
-          margin-bottom: 1rem;
-        }
-        footer {
-          flex-direction: column;
-        }
-
-        footer ul,
-        footer .adresse,
-        footer .Rights {
-          flex: 0 0 100%;
-          width: 100%;
-          padding: 1rem 0;
-        }
-
-        footer .adresse {
-          align-items: center;
-          text-align: center;
-        }
-      }
-      @media (max-width: 480px) {
-        .head-top p {
-          font-size: 1rem;
-        }
-        footer {
-          padding: 1.5rem 0.5rem;
-        }
-
-        footer ul li a,
-        footer .adresse span,
-        .Rights p {
-          font-size: 0.9rem;
-        }
-      }
-      @media (max-width: 1160px) {
-        .container {
-          flex-direction: column;
-        }
-        main {
-          min-height: 140vh;
-        }
-        body {
-          min-height: 140vh;
-        }
-        main h1 {
-          text-align: start;
-        }
+      footer {
+        padding: 1.5rem 0.5rem;
       }
 
-      @media (max-width: 580px) {
-        .container {
-          flex-direction: column;
-        }
-        main {
-          min-height: 200vh;
-        }
-        body {
-          min-height: 200vh;
-        }
-        main h1 {
-          text-align: start;
-        }
+      footer ul li a,
+      footer .adresse span,
+      .Rights p {
+        font-size: 0.9rem;
       }
-    </style>
-  </head>
-  <body>
-    <div id="pageLoader"><div class="spinner"></div></div>
-    <nav>
-      <div class="head-top"><p>Seafood in Mahajanga</p></div>
-      <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-links">
-        <ul id="navMenu">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/introduction.html">Introduction</a></li>
-          <li><a href="/seafood_dishes.html">Seafood Dishes</a></li>
-          <li><a href="/where_to_eat.html">Where to Eat</a></li>
-          <li><a href="/culture.html">Culture</a></li>
-          <li><a href="./index.html#Sustainability">Sustainability</a></li>
-          <li><a href="./index.html#Conclusion">Conclusion</a></li>
-        </ul>
-      </div>
-    </nav>
-    <main>
-      <h1>The cultural Connection</h1>
-      <div class="container">
-        <div class="image1">
-          <img src="Culture.jpg" alt="image" />
-        </div>
+    }
 
-        <div class="text">
-          <h3>
-            Srafood in Mahajanga isn't just about the food-it's a way of life.
-            The city's fishing industry plays avital role in the local economy,
-            and many families have been fishing for generations.
-            <br /><br />Sharing a seafood meal here is not just a culinary
-            experience but also a way connect with the culture and traditions of
-            the region.
-          </h3>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <ul>
-        <li>
-          <a href="/index.html">Home</a>
-        </li>
-        <li>
-          <a href="/introduction.html">Introduction</a>
-        </li>
-        <li>
-          <a href="/seafood_dishes.html">Seafood Dishes</a>
-        </li>
-        <li>
-          <a href="/where_to_eat.html">Where to Eat</a>
-        </li>
-        <li>
-          <a href="/culture.html">Culture</a>
-        </li>
-        <li>
-          <a href="./index.html#Sustainability">Sustainability</a>
-        </li>
-        <li>
-          <a href="./index.html#Conclusion">Conclusion</a>
-        </li>
+    @media (max-width: 1160px) {
+      .container {
+        flex-direction: column;
+      }
+
+      main {
+        min-height: 140vh;
+      }
+
+      body {
+        min-height: 140vh;
+      }
+
+      main h1 {
+        text-align: start;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .container {
+        flex-direction: column;
+      }
+
+      main {
+        min-height: 200vh;
+      }
+
+      body {
+        min-height: 200vh;
+      }
+
+      main h1 {
+        text-align: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pageLoader">
+    <div class="spinner"></div>
+  </div>
+  <nav>
+    <div class="head-top">
+      <p>Seafood in Mahajanga</p>
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links">
+      <ul id="navMenu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/introduction.html">Introduction</a></li>
+        <li><a href="/seafood_dishes.html">Seafood Dishes</a></li>
+        <li><a href="/where_to_eat.html">Where to Eat</a></li>
+        <li><a href="/culture.html">Culture</a></li>
+        <li><a href="./index.html#Sustainability">Sustainability</a></li>
+        <li><a href="./index.html#Conclusion">Conclusion</a></li>
       </ul>
-      <div class="adresse">
-        <span
-          ><i class="fa-regular fa-envelope"></i
-          >SeafoodinMahajanga@gmail.com</span
-        >
-        <span><i class="fa-solid fa-phone"></i>+261 32 97 19391</span>
-        <span>Tsaramandroso Ambany Mahajanga I, Madagascar</span>
+    </div>
+  </nav>
+  <main>
+    <h1>The cultural Connection</h1>
+    <div class="container">
+      <div class="image1">
+        <img src="Culture.jpg" alt="image" />
       </div>
-      <div class="Rights">
-        <p>@2025 seafood All Rights Reserved</p>
+
+      <div class="text">
+        <h3>
+          Srafood in Mahajanga isn't just about the food-it's a way of life.
+          The city's fishing industry plays avital role in the local economy,
+          and many families have been fishing for generations.
+          <br /><br />Sharing a seafood meal here is not just a culinary
+          experience but also a way connect with the culture and traditions of
+          the region.
+        </h3>
       </div>
-    </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="/seafood_dishes.html">Seafood Dishes</a>
+      </li>
+      <li>
+        <a href="/where_to_eat.html">Where to Eat</a>
+      </li>
+      <li>
+        <a href="/culture.html">Culture</a>
+      </li>
+      <li>
+        <a href="./index.html#Sustainability">Sustainability</a>
+      </li>
+      <li>
+        <a href="./index.html#Conclusion">Conclusion</a>
+      </li>
+    </ul>
+    <div class="adresse">
+      <span><i class="fa-regular fa-envelope"></i>SeafoodinMahajanga@gmail.com</span>
+      <span><i class="fa-solid fa-phone"></i>+261 32 97 19391</span>
+      <span>Tsaramandroso Ambany Mahajanga I, Madagascar</span>
+    </div>
+    <div class="Rights">
+      <p>@2025 seafood All Rights Reserved</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menuToggle");
+      const navMenu = document.getElementById("navMenu");
 
-        menuToggle.addEventListener("click", function () {
-          navMenu.classList.toggle("show");
+      menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
 
-          // Change icon based on menu state
-          const icon = menuToggle.querySelector("i");
-          if (navMenu.classList.contains("show")) {
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-times");
-          } else {
-            icon.classList.remove("fa-times");
-            icon.classList.add("fa-bars");
-          }
-        });
+        // Change icon based on menu state
+        const icon = menuToggle.querySelector("i");
+        if (navMenu.classList.contains("show")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
 
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll(".nav-links ul li a");
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            if (window.innerWidth <= 768) {
-              navMenu.classList.remove("show");
-              const icon = menuToggle.querySelector("i");
-              icon.classList.remove("fa-times");
-              icon.classList.add("fa-bars");
-            }
-          });
-        });
-
-        // Handle window resize
-        window.addEventListener("resize", function () {
-          if (window.innerWidth > 768) {
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll(".nav-links ul li a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          if (window.innerWidth <= 768) {
             navMenu.classList.remove("show");
             const icon = menuToggle.querySelector("i");
             icon.classList.remove("fa-times");
@@ -463,12 +467,27 @@
           }
         });
       });
-    </script>
-    <script>
-      window.addEventListener("load", function () {
-        const loader = document.getElementById("pageLoader");
-        if (loader) loader.classList.add("hidden");
+
+      // Handle window resize
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove("show");
+          const icon = menuToggle.querySelector("i");
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       });
-    </script>
-  </body>
+    });
+  </script>
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("pageLoader");
+      if (loader) loader.classList.add("hidden");
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./js/animations.js"></script>
+</body>
+
 </html>
